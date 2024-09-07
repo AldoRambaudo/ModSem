@@ -1,0 +1,1547 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/aldorambaudo/ontologies/Museo/"
+     xml:base="http://www.semanticweb.org/aldorambaudo/ontologies/Museo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:bag="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/spec/"
+     xmlns:list="http://www.ontologydesignpatterns.org/cp/owl/list.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/preferredNamespacePrefix"
+     xmlns:Museo="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#"
+     xmlns:vann1="http://purl.org/vocab/vann/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
+        <dc:creator xml:lang="en">Aldo Rambaudo</dc:creator>
+        <dc:date></dc:date>
+        <dc:description xml:lang="en">An ontology for representing item and entities exposed in Turin&apos;s Museums</dc:description>
+        <dc:title xml:lang="en">Turin&apos;s Museums Ontology</dc:title>
+        <vann1:preferredNamespacePrefix></vann1:preferredNamespacePrefix>
+        <vann1:preferredNamespaceUri></vann1:preferredNamespaceUri>
+        <rdfs:label xml:lang="it">Musei di Torino</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minQualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minQualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasFirstItem -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasFirstItem">
+        <rdfs:comment xml:lang="it">Proprietà che esprime in una Trilogia  il primo Film</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasLastItem -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#hasLastItem">
+        <rdfs:comment xml:lang="it">Proprietà che esprime in una Trilogia l&apos;ultimo Film</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#nextItem -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#nextItem">
+        <rdfs:comment xml:lang="it">Proprietà che esprime l&apos;ordine di film in Saghe (Film di cui è successivo)</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#delFilm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#delFilm">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Props"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <rdfs:comment xml:lang="it">Proprietà che collega un Prop al Film di appartenenza</rdfs:comment>
+        <rdfs:label xml:lang="it">Del Film</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#direttoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#direttoDa">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#haDiretto"/>
+        <rdfs:comment xml:lang="it">Proprietà che collega un Film al suo Regista</rdfs:comment>
+        <rdfs:label xml:lang="it">Diretto Da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#haDiretto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#haDiretto">
+        <rdfs:comment xml:lang="it">Proprietà che collega un Regista al Film che ha diretto</rdfs:comment>
+        <rdfs:label xml:lang="it">ha diretto</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#haProvenienza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#haProvenienza">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="it">Proprietà che collega un Reperto al luogo dove è stato trovato (classe enumerata)</rdfs:comment>
+        <rdfs:label xml:lang="it">ha Provenienza</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#haScoperto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#haScoperto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#scopertoDa"/>
+        <rdfs:comment xml:lang="it">Proprietà che collega un Archeologo ai Reperti che ha scoperto</rdfs:comment>
+        <rdfs:label xml:lang="it">ha scoperto</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ideatoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ideatoDa">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#delFilm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#direttoDa"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#scopertoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#scopertoDa">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="it">Proprietà che collega un un Reperto all&apos;Archeologo che lo ha scoperto</rdfs:comment>
+        <rdfs:label xml:lang="it">Scoperto Da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#size -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#size">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#esposto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#esposto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Proprietà degli oggetti Reperto se sono in esposizione in una sala (altrimenti assegnati al magazzino)</rdfs:comment>
+        <rdfs:label xml:lang="it">Esposto</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#genere -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#genere">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Props"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Proprietà dei film e dei Props che li categorizza per il genere cinematografico</rdfs:comment>
+        <rdfs:label xml:lang="it">Genere (Film)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#periodo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#periodo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Periodo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Proprietà degli oggetti Reperto che ne descrive il periodo di creazione</rdfs:comment>
+        <rdfs:label xml:lang="it">Periodo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Proprietà degli oggetti Reperto che ne descrivono la tipologia</rdfs:comment>
+        <rdfs:label xml:lang="it">tipo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/film -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/film">
+        <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoCinema"/>
+        <rdfs:comment xml:lang="en">Equivalent class to Film</rdfs:comment>
+        <rdfs:label xml:lang="en">Film</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/museum -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/museum">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoCinema"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoEgizio"/>
+        <rdfs:comment xml:lang="en">Equivalent class to Museo Cinema e Museo Egizio</rdfs:comment>
+        <rdfs:label xml:lang="en">museum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoCinema"/>
+        <rdfs:comment xml:lang="it">Un Film presente come tema nel Museo del Cinema</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Saga -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Saga">
+        <rdfs:comment xml:lang="it">Insieme di FIlm che hanno un tema comune</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collezione -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collezione">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoCinema"/>
+        <rdfs:comment xml:lang="it">Collezione di Film (concetto di generale)</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#AnticoRegno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#AnticoRegno">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#periodo"/>
+                <owl:hasValue>AnticoRegno</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Periodo"/>
+        <rdfs:comment xml:lang="it">Periodo Egizio che va dal 2700 al 2200 a.C</rdfs:comment>
+        <rdfs:label xml:lang="it">Periodo Antico Regno</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Archeologo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Archeologo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#haScoperto"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <rdfs:comment xml:lang="it">Professionista qualificato in una delle branche dell&apos;archeologia</rdfs:comment>
+        <rdfs:label xml:lang="it">Archeologo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Avventura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Avventura">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#delFilm"/>
+                        <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#genere"/>
+                        <owl:hasValue>Avventura</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Settori"/>
+        <rdfs:comment xml:lang="it">Settore del Museo del Cinema a tema Film di Avventura</rdfs:comment>
+        <rdfs:label xml:lang="it">Settore Avventura</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Azione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Azione">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#delFilm"/>
+                        <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#genere"/>
+                        <owl:hasValue>Azione</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Settori"/>
+        <rdfs:comment xml:lang="it">Settore del Museo del Cinema a tema Film di Azione</rdfs:comment>
+        <rdfs:label xml:lang="it">Settore Azione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Decorazione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Decorazione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                <owl:hasValue>Decorazione</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <rdfs:comment xml:lang="it">Reperto classificato come decorativo e non appartenente alle altre categorie</rdfs:comment>
+        <rdfs:label xml:lang="it">Reperto Decorazione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Magazzino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Magazzino">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#esposto"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoEgizio"/>
+        <rdfs:comment xml:lang="it">Zona del Museo Egizio di Torino dedicata a riporre i Reperti non esposti</rdfs:comment>
+        <rdfs:label xml:lang="it">Sezione Museo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MedioRegno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MedioRegno">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#periodo"/>
+                <owl:hasValue>MedioRegno</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Periodo"/>
+        <rdfs:comment xml:lang="it">Periodo Egizio che va tra il 2055 a.C. ed il 1790 a.C</rdfs:comment>
+        <rdfs:label xml:lang="it">Periodo Medio Regno</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Mummia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Mummia">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                <owl:hasValue>Mummia</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <rdfs:comment xml:lang="it">Reperto categorizzato come Mummia</rdfs:comment>
+        <rdfs:label xml:lang="it">Reperto Mummia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoCinema -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoCinema">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Museo del Cinema di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Museo del Cinema</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoEgizio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoEgizio">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Museo Egizio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#NuovoRegno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#NuovoRegno">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#periodo"/>
+                <owl:hasValue>NuovoRegno</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Periodo"/>
+        <rdfs:comment xml:lang="it">Periodo Egizio che va dal 1550 al 1069 a.C</rdfs:comment>
+        <rdfs:label xml:lang="it">Periodo Nuovo Regno</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Papiro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Papiro">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                <owl:hasValue>Papiro</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <rdfs:comment xml:lang="it">Reperto categorizzato come Papiro</rdfs:comment>
+        <rdfs:label xml:lang="it">Reperto Papiro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Periodo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Periodo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoEgizio"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#AnticoRegno"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MedioRegno"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#NuovoRegno"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Predinastico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tardo"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="it">Periodo di creazione dei Reperti nell&apos;Antico Egitto</rdfs:comment>
+        <rdfs:label xml:lang="it">Periodo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">Individuo appartente alla specie umana</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Predinastico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Predinastico">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#periodo"/>
+                <owl:hasValue>Predinastico</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Periodo"/>
+        <rdfs:comment xml:lang="it">Periodo Egizio che va dal 3300 al 3050 A.C.</rdfs:comment>
+        <rdfs:label xml:lang="it">Periodo Predinastico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Props -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Props">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoCinema"/>
+        <rdfs:comment xml:lang="it">Oggetti di Scena Presenti nel Museo del Cinema di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Props</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Provenienza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Provenienza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Cairo"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Deirel-Medina"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Ignota"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tebe"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ValledelleRegine"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoEgizio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Quadrilogia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Quadrilogia">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Saga"/>
+        <rdfs:comment xml:lang="it">Insieme di quattro film che hanno un tema comune e una sequenza</rdfs:comment>
+        <rdfs:comment xml:lang="en">List - An ordered array of itemds, that can be present in multiple copies</rdfs:comment>
+        <rdfs:label xml:lang="en">list</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Regista -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Regista">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#haDiretto"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <rdfs:comment xml:lang="it">Registra</rdfs:comment>
+        <rdfs:comment xml:lang="it">Responsabile artistico e tecnico di un&apos;opera audiovisiva</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoEgizio"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Decorazione"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Mummia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Papiro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sarcofago"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Statua"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Strumento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Vaso"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="it">Reperti recuperati e in proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Reperto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sala">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoEgizio"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaCeramiche"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaGeroglifici"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaMummie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaStatue"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaUtensili"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment xml:lang="it">Sale Espositive del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Sala</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaCeramiche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaCeramiche">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                                <owl:hasValue>Decorazione</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                                <owl:hasValue>Piatto</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                                <owl:hasValue>Vaso</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#esposto"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sala"/>
+        <rdfs:comment xml:lang="it">Sala contenenti reperti di tipo Decorazione, Piatto e Vaso</rdfs:comment>
+        <rdfs:label xml:lang="it">Sala delle Ceramiche</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaGeroglifici -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaGeroglifici">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#esposto"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                        <owl:hasValue>Papiro</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sala"/>
+        <rdfs:comment xml:lang="it">Sala contenenti reperti di tipo Papiro</rdfs:comment>
+        <rdfs:label xml:lang="it">Sala dei Geroglifici</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaMummie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaMummie">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                                <owl:hasValue>Mummia</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                                <owl:hasValue>Sarcofago</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#esposto"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sala"/>
+        <rdfs:comment xml:lang="it">Sala contenenti reperti di tipo Mummia</rdfs:comment>
+        <rdfs:label xml:lang="it">Sala delle Mummie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaStatue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaStatue">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#esposto"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                        <owl:hasValue>Statua</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sala"/>
+        <rdfs:comment xml:lang="it">Sala contenenti reperti di tipo Statua</rdfs:comment>
+        <rdfs:label xml:lang="it">Sala delle Statue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaUtensili -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SalaUtensili">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#esposto"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                        <owl:hasValue>Utensile</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sala"/>
+        <rdfs:comment xml:lang="it">Sala contenenti reperti di tipo Utensile</rdfs:comment>
+        <rdfs:label xml:lang="it">Sala degli Utensili</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sarcofago -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sarcofago">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                <owl:hasValue>Sarcofago</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <rdfs:comment xml:lang="it">Reperto categorizzato come Sarcofago</rdfs:comment>
+        <rdfs:label xml:lang="it">Reperto Sarcofago</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sci-fi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Sci-fi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#delFilm"/>
+                        <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#genere"/>
+                        <owl:hasValue>Sci-fi</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Settori"/>
+        <rdfs:label xml:lang="it">Settore Sci-fi</rdfs:label>
+        <rdfs:label xml:lang="it">Settore del Museo del Cinema a tema Film Sci-fi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Settori -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Settori">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#delFilm"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MuseoCinema"/>
+        <rdfs:comment xml:lang="it">Settori di esposizione del Museo del Cinema di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Settori di esposizione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Statua -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Statua">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                <owl:hasValue>Statua</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <rdfs:comment xml:lang="it">Reperto categorizzato come Statua</rdfs:comment>
+        <rdfs:label xml:lang="it">Reperto Statua</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Strumento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Strumento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                <owl:hasValue>Strumento</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <rdfs:comment xml:lang="it">Reperto categorizzato come Strumento</rdfs:comment>
+        <rdfs:label xml:lang="it">Reperto Strumento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tardo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tardo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#periodo"/>
+                <owl:hasValue>Tardo</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Periodo"/>
+        <rdfs:comment xml:lang="it">Periodo egizio che va dal 672 al 332 a.C.</rdfs:comment>
+        <rdfs:label xml:lang="it">Periodo Tardo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Trilogia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Trilogia">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Saga"/>
+        <rdfs:comment xml:lang="it">Insieme di tre film che hanno un tema comune e una sequenza</rdfs:comment>
+        <rdfs:comment xml:lang="en">List - An ordered array of itemds, that can be present in multiple copies</rdfs:comment>
+        <rdfs:label xml:lang="en">list</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Vaso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Vaso">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#tipo"/>
+                <owl:hasValue>Vaso</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <rdfs:comment xml:lang="it">Reperto categorizzato come Vaso</rdfs:comment>
+        <rdfs:label xml:lang="it">Reperto Vaso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:comment xml:lang="en">Equivalent class to Persona</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Amuleto_Thot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Amuleto_Thot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Ignota"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>Tardo</Museo:periodo>
+        <Museo:tipo>Decorazione</Museo:tipo>
+        <rdfs:comment xml:lang="it">Amuleto di Thot, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Amuleto di Thot  (Reperto Egizio)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Bernardino_Drovetti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Bernardino_Drovetti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <rdfs:comment xml:lang="it">Archeologo e Collezionista di Reperti Egizi</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona (Uomo)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Cairo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Cairo">
+        <rdfs:comment xml:lang="it">Luogo di ritrovamento Reperti egizi</rdfs:comment>
+        <rdfs:label xml:lang="it">Città del Cairo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#CappelloIndianaJones -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#CappelloIndianaJones">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Props"/>
+        <Museo:delFilm rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IPredatoridell&apos;ArcaPerdduta"/>
+        <Museo:genere>Avventura</Museo:genere>
+        <rdfs:comment xml:lang="it">Oggetto di Scena del Film &quot;I Predatori dell&apos;Arca Perduta&quot;</rdfs:comment>
+        <rdfs:label xml:lang="it">Oggetto di Scena</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#CascoDiStormTrooper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#CascoDiStormTrooper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Props"/>
+        <Museo:delFilm rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaVendettaDeiSith"/>
+        <Museo:genere>Sci-fi</Museo:genere>
+        <rdfs:comment xml:lang="it">Oggetto di Scena del film di Star Wars, La vendetta dei Sith</rdfs:comment>
+        <rdfs:label xml:lang="it">Oggetto di Scena</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ContenitoreAnatraMummificata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ContenitoreAnatraMummificata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ValledelleRegine"/>
+        <Museo:scopertoDa rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Elsa_Schiapparelli"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>NuovoRegno</Museo:periodo>
+        <Museo:tipo>Vaso</Museo:tipo>
+        <rdfs:comment xml:lang="it">Contenitore di una Mummia di Anatra, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Contenitore di una Mummia di anatra</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#CorpoMummificato_S.293 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#CorpoMummificato_S.293">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Ignota"/>
+        <Museo:scopertoDa rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Elsa_Schiapparelli"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>Predinastico</Museo:periodo>
+        <Museo:tipo>Mummia</Museo:tipo>
+        <rdfs:comment xml:lang="it">Corpo Mummificato, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Corpo Mummificato di epoca Egiziana S.293</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#CostumeDaSpartano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#CostumeDaSpartano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Props"/>
+        <Museo:delFilm rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#300"/>
+        <Museo:genere>Azione</Museo:genere>
+        <rdfs:comment xml:lang="it">Oggetto di scena del Film 300</rdfs:comment>
+        <rdfs:label xml:lang="it">Oggetto di Scena</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Deirel-Medina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Deirel-Medina">
+        <rdfs:comment xml:lang="it">Luogo di ritrovamento Reperti egizi</rdfs:comment>
+        <rdfs:label xml:lang="it">Città Dei el-Medina</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Elsa_Schiapparelli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Elsa_Schiapparelli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <rdfs:comment xml:lang="it">Archeologo e Collezionista di Reperti Egizi</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona (Donna)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Flinders_Petrie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Flinders_Petrie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <rdfs:comment xml:lang="it">Archeologo e Collezionista di Reperti Egizi</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona (Uomo)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Foy_D_Scalf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Foy_D_Scalf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <rdfs:comment xml:lang="it">Archeologo e Collezionista di Reperti Egizi</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona (Uomo)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#FrecciaS.293 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#FrecciaS.293">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Ignota"/>
+        <Museo:scopertoDa rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Elsa_Schiapparelli"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>Predinastico</Museo:periodo>
+        <Museo:tipo>Strumento</Museo:tipo>
+        <rdfs:comment xml:lang="it">Freccia del corredo funebre S.293, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Freccia del corredo funebre S.293</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#GeorgeLucas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#GeorgeLucas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#GuerreStellari"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaMinacciaFantasma"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaVendettaDeiSith"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;AttaccoDeiCloni"/>
+        <rdfs:comment xml:lang="it">Registra di numerosi film Sci-fi</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona (Uomo)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#GuerreStellari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#GuerreStellari">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <Museo:genere>Sci-fi</Museo:genere>
+        <rdfs:comment xml:lang="it">Film Sci-fi presente in una trilogia di Star Wars</rdfs:comment>
+        <rdfs:label xml:lang="it">Film Sci-fi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Ignota -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Ignota">
+        <rdfs:comment xml:lang="it">Luogo di ritrovamento Reperti egizi</rdfs:comment>
+        <rdfs:label xml:lang="it">Posizione Ignota</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRegnodelTeschiodiCristallo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRegnodelTeschiodiCristallo">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <list:nextItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;UltimaCrociata"/>
+        <rdfs:comment xml:lang="it">Film d&apos;Avventura presente nella quadrilogia di Indiana Jones</rdfs:comment>
+        <rdfs:label xml:lang="it">Film d&apos;Avventura</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRitornodelloJedi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRitornodelloJedi">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <list:nextItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;imperoColpisceAncora"/>
+        <Museo:genere>Sci-fi</Museo:genere>
+        <rdfs:comment xml:lang="it">Film Sci-fi presente in una trilogia di Star Wars</rdfs:comment>
+        <rdfs:label xml:lang="it">Film Sci-fi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlTempioMaledetto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlTempioMaledetto">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <list:nextItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IPredatoridell&apos;ArcaPerdduta"/>
+        <Museo:genere>Avventura</Museo:genere>
+        <rdfs:comment xml:lang="it">Film d&apos;Avventura presente nella quadrilogia di Indiana Jones</rdfs:comment>
+        <rdfs:label xml:lang="it">Film d&apos;Avventura</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IrvinKershner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IrvinKershner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;imperoColpisceAncora"/>
+        <rdfs:comment xml:lang="it">Registra di numerosi film Sci-fi</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona (Uomo)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaMinacciaFantasma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaMinacciaFantasma">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <Museo:genere>Sci-fi</Museo:genere>
+        <rdfs:comment xml:lang="it">Film Sci-fi presente in una trilogia di Star Wars</rdfs:comment>
+        <rdfs:label xml:lang="it">Film Sci-fi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaVendettaDeiSith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaVendettaDeiSith">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <list:nextItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;AttaccoDeiCloni"/>
+        <Museo:genere>Sci-fi</Museo:genere>
+        <rdfs:comment xml:lang="it">Film Sci-fi presente in una trilogia di Star Wars</rdfs:comment>
+        <rdfs:label xml:lang="it">Film Sci-fi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MummiaTamit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MummiaTamit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tebe"/>
+        <Museo:scopertoDa rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Bernardino_Drovetti"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>Tardo</Museo:periodo>
+        <Museo:tipo>Mummia</Museo:tipo>
+        <rdfs:comment xml:lang="it">Mummia della Regina Tamit, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Mummia di Regina Tamit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MummiaTapeni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#MummiaTapeni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tebe"/>
+        <Museo:scopertoDa rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Bernardino_Drovetti"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>Tardo</Museo:periodo>
+        <Museo:tipo>Mummia</Museo:tipo>
+        <rdfs:comment xml:lang="it">Mummia di Tapeni, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Mummia di Tapeni, reperto egizio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#PapiroEbers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#PapiroEbers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tebe"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>AnticoRegno</Museo:periodo>
+        <Museo:tipo>Papiro</Museo:tipo>
+        <rdfs:comment xml:lang="it">Papiro di Ebers, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Papiro di Ebers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#PapiroKahun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#PapiroKahun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Cairo"/>
+        <Museo:scopertoDa rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Flinders_Petrie"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Museo:esposto>
+        <Museo:periodo>MedioRegno</Museo:periodo>
+        <Museo:tipo>Papiro</Museo:tipo>
+        <rdfs:comment xml:lang="it">Papiro di Kahun, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Papiro di Kahun</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#QuadrilogiaIndianaJones -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#QuadrilogiaIndianaJones">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collezione"/>
+        <list:hasFirstItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IPredatoridell&apos;ArcaPerdduta"/>
+        <list:hasLastItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRegnodelTeschiodiCristallo"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRegnodelTeschiodiCristallo"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlTempioMaledetto"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IPredatoridell&apos;ArcaPerdduta"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;UltimaCrociata"/>
+        <bag:size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bag:size>
+        <rdfs:comment xml:lang="it">Quadrilogia di Film con protagonista Indiana Jonesl</rdfs:comment>
+        <rdfs:label xml:lang="it">Quadrilogia di Film</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#RichardMarquand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#RichardMarquand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRitornodelloJedi"/>
+        <rdfs:comment xml:lang="it">Registra di numerosi film Sci-fi</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona (Uomo)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SarcofagoIbi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SarcofagoIbi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tebe"/>
+        <Museo:scopertoDa rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Foy_D_Scalf"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>Tardo</Museo:periodo>
+        <Museo:tipo>Sarcofago</Museo:tipo>
+        <rdfs:comment xml:lang="it">Sarcofago di Ibi, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Sarcofago di Ibi, reperto egizio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SarcofagoTamit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SarcofagoTamit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tebe"/>
+        <Museo:scopertoDa rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Bernardino_Drovetti"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>Tardo</Museo:periodo>
+        <Museo:tipo>Sarcofago</Museo:tipo>
+        <rdfs:comment xml:lang="it">Sarcofago della Regina Tamit, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Sarcofago della Regina Tamit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#StatuaRedji -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#StatuaRedji">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Cairo"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Museo:esposto>
+        <Museo:periodo>AnticoRegno</Museo:periodo>
+        <Museo:tipo>Statua</Museo:tipo>
+        <rdfs:comment xml:lang="it">Statua di Redit, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Statua di Redit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SteleSaherhotep -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#SteleSaherhotep">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Ignota"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>MedioRegno</Museo:periodo>
+        <Museo:tipo>Statua</Museo:tipo>
+        <rdfs:comment xml:lang="it">Stele di Saherhotep, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Stele di Saherhotep</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Stele_Funeraria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Stele_Funeraria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Reperto"/>
+        <Museo:haProvenienza rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Deirel-Medina"/>
+        <Museo:scopertoDa rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Bernardino_Drovetti"/>
+        <Museo:esposto rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Museo:esposto>
+        <Museo:periodo>NuovoRegno</Museo:periodo>
+        <Museo:tipo>Statua</Museo:tipo>
+        <rdfs:comment xml:lang="it">Stele funeraria di origine sconosciuta, incisi geroglifici, reperto archeologico Egiziano di proprietà del Museo Egizio di Torino</rdfs:comment>
+        <rdfs:label xml:lang="it">Stele funeraria di origine sconosciuta, reperto Egizio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#StevenSpielberg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#StevenSpielberg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRegnodelTeschiodiCristallo"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlTempioMaledetto"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IPredatoridell&apos;ArcaPerdduta"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;UltimaCrociata"/>
+        <rdfs:comment xml:lang="it">Regista di numerosi Film</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona (Uomo)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tebe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Tebe">
+        <rdfs:comment xml:lang="it">Luogo di ritrovamento Reperti egizi</rdfs:comment>
+        <rdfs:label xml:lang="it">Città di Tebe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#TrilogiaOriginaleStarWars -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#TrilogiaOriginaleStarWars">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collezione"/>
+        <list:hasFirstItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#GuerreStellari"/>
+        <list:hasLastItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRitornodelloJedi"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#GuerreStellari"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlRitornodelloJedi"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;imperoColpisceAncora"/>
+        <bag:size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</bag:size>
+        <rdfs:comment xml:lang="it">Prima Trilogia dei film di StarWars (Ep 4-5-6)</rdfs:comment>
+        <rdfs:label xml:lang="it">Trilogia di Film</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#TrilogiaPrequelStarWars -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#TrilogiaPrequelStarWars">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl#Collezione"/>
+        <list:hasFirstItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaMinacciaFantasma"/>
+        <list:hasLastItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaVendettaDeiSith"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaMinacciaFantasma"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaVendettaDeiSith"/>
+        <bag:hasItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;AttaccoDeiCloni"/>
+        <bag:size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</bag:size>
+        <rdfs:comment xml:lang="it">Seconda Trilogia di Film di Star Wars (Ep 1-2-3)</rdfs:comment>
+        <rdfs:label xml:lang="it">Trilogia di Film</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ValledelleRegine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ValledelleRegine">
+        <rdfs:comment xml:lang="it">Luogo di ritrovamento Reperti egizi</rdfs:comment>
+        <rdfs:label xml:lang="it">Zona Valle delle Regine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ZackSnyder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#ZackSnyder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#Persona"/>
+        <Museo:haDiretto rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#300"/>
+        <rdfs:comment xml:lang="it">Registra di numerosi film</rdfs:comment>
+        <rdfs:label xml:lang="it">Persona (Uomo)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#300 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#300">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <Museo:genere>Azione</Museo:genere>
+        <rdfs:comment xml:lang="it">Film di Azione/Storico che racconta la battaglia delle Termopoli</rdfs:comment>
+        <rdfs:label xml:lang="it">300 (Film)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IPredatoridell&apos;ArcaPerdduta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IPredatoridell&apos;ArcaPerdduta">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <Museo:genere>Avventura</Museo:genere>
+        <rdfs:comment xml:lang="it">Film d&apos;Avventura presente nella quadrilogia di Indiana Jones</rdfs:comment>
+        <rdfs:label xml:lang="it">Film d&apos;Avventura</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;AttaccoDeiCloni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;AttaccoDeiCloni">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <list:nextItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#LaMinacciaFantasma"/>
+        <Museo:genere>Sci-fi</Museo:genere>
+        <rdfs:comment xml:lang="it">Film Sci-fi presente in una trilogia di Star Wars</rdfs:comment>
+        <rdfs:label xml:lang="it">Film Sci-fi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;UltimaCrociata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;UltimaCrociata">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <list:nextItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#IlTempioMaledetto"/>
+        <Museo:genere>Avventura</Museo:genere>
+        <rdfs:comment xml:lang="it">Film d&apos;Avventura presente nella quadrilogia di Indiana Jones</rdfs:comment>
+        <rdfs:label xml:lang="it">Film d&apos;Avventura</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;imperoColpisceAncora -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#L&apos;imperoColpisceAncora">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Film"/>
+        <list:nextItem rdf:resource="http://www.semanticweb.org/aldorambaudo/ontologies/Museo#GuerreStellari"/>
+        <Museo:genere>Sci-fi</Museo:genere>
+        <rdfs:comment xml:lang="it">Film Sci-fi presente in una trilogia di Star Wars</rdfs:comment>
+        <rdfs:label xml:lang="it">Film Sci-fi</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:minQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent">
+        <rdfs:comment xml:lang="it">NON UTILIZZATO</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf">
+        <rdfs:comment xml:lang="it">Proprietà che collega un Film alla Saga di cui ne fa parte</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListFilm">
+        <rdfs:comment xml:lang="it">Lista di Film presenti in una Saga</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#firstItemOf">
+        <rdfs:comment xml:lang="it">Proprietà che esprime il primo Film in una Trilogia</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#lastItemOf">
+        <rdfs:comment xml:lang="it">Proprietà che esprime il primo Film in una Trilogia</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#previousItem">
+        <rdfs:comment xml:lang="it">Proprietà che esprime l&apos;ordine di film in Saghe (Film di cui è precedente)</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
